@@ -1,3 +1,5 @@
+$gray-lighter-color: #f4f4f4; // Or any other desired color value
+
 $primary-color: #008080;
 $gray-darker-color: #555566;
 $gray-dark-color: #888899;
@@ -5,6 +7,8 @@ $gray-color: #777799;
 $gray-light-color: #e1e1f1;
 $red-color: #cc0000;
 $green-color: #00aa00;
+$background-color: #f4f4f4; // Original background color, you can replace it with the desired grey color value
+$gray-color: #808080; // Define a grey color value
 
 @mixin breakpoint {
   @media only screen and (min-width: 800px) {
