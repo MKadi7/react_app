@@ -5,7 +5,7 @@ import { GrClearOption } from "react-icons/gr";
 function Tasks({ tasks, onStatusChange, onTaskRemove, onClearTasks }) {
   return (
     <div className='tasks-component'>
-      <h2>These are the tasks:</h2>
+      <h2>Tasks List:</h2>
 
       {/* Renders each task. */}
       {tasks.map(
