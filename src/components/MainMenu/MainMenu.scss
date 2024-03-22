@@ -1,0 +1,32 @@
+.main-menu {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem; // Add margin at the bottom
+      margin-top: 2rem; // Add margin at the top
+    }
+  
+    li {
+      margin: 0 1rem;
+      transition: transform 0.3s ease;
+    }
+  
+    .menu-link {
+      text-decoration: none;
+      color: #e79f35;
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+  
+      &:hover {
+        background-color: #f0f0f0;
+        color: #555;
+      }
+    }
+  }
+  
