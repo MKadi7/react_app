@@ -1,5 +1,9 @@
 @import "./../../styles/variables.scss";
 
+body {
+  background-color: #343232; // Apply the grey color directly to the body tag
+}
+
 .form-component {
   padding: 1rem;
 
@@ -26,7 +30,7 @@
       span {
         display: block;
         width: 7rem;
-        color: $gray-dark-color;
+        color:white;
         font-size: 1rem;
         line-height: 2rem;
         text-align: right;
@@ -47,7 +51,7 @@
 
     button {
       margin: 0 0 0 8rem;
-      background-color: $primary-color;
+      background-color: #e79f35;
       border: none;
       padding: 0.75rem 2rem 0.75rem 1rem;
       color: #fff;
