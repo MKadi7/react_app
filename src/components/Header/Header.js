@@ -7,8 +7,8 @@ function Header() {
   return (
     <div>
       <header>
-        <div className='title'><FaTasks /> Todo App</div>
-        <div className='author'>by Muhammed Gadi</div>
+        <div className='title'><FaTasks /> TaskEase </div>
+        <div className='author'>By Muhammed Gadi</div>
       </header>
       <MainMenu /> {/* Include the MainMenu component */}
     </div>
