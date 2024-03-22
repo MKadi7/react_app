@@ -1,74 +1,102 @@
 @import "./../../../styles/variables.scss";
 
 .task-component {
-	border: solid 1px $gray-light-color;
-	margin: 1rem 0 0 0;
+  border: 2px solid $gray-light-color;
+  border-radius: 8px;
+  background-color: #808080;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin: 2rem auto; // Center the task component horizontally
+  width: 80%; // Adjust the width as needed
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
 
-	.content {
-		padding: 1rem;
-		font-size: 1rem;
-		color: $gray-color;
+  .content {
+    padding: 1rem;
+    color: whitesmoke;
 
-		h3 {
-			font-size: 1.7rem;
-			font-weight: bold;
-			margin: 0;
-			padding: 0;
-			color: $gray-darker-color;
-		}
+    h3 {
+      font-size: 1.8rem;
+      margin: 0;
+      color: #c98a23;
+    }
 
-		div.id {
-			font-size: 0.9rem;
-			color: $gray-color;
-		}
+    .id {
+      font-size: 0.9rem;
+      color: $gray-light-color;
+    }
 
-		div.status {
-			margin: 0.5rem 0 0;
-			color: $gray-dark-color;
-			font-size: 0.9rem;
-			font-weight: bold;
+    .status {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      font-weight: bold;
 
-			i,
-			u {
-				text-decoration: none;
-				font-style: normal;
-				margin-left: 0.5rem;
-				font-weight: normal;
-				font-size: 1rem;
-			}
+      i, u {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+      }
 
-			u {
-				color: $green-color;
-			}
-		}
-	}
+      u {
+        color: $green-color;
+      }
 
-	.control {
-		display: flex;
-		border-top: solid 1px $gray-light-color;
+      i {
+        color: #205bdb;
+      }
+    }
+  }
 
-		button {
-			display: flex;
-			align-items: center;
-			margin: 0 1rem;
-			padding: 0.5rem 0;
-			border: none;
-			background-color: transparent;
-			font-size: 1rem;
-			cursor: pointer;
+  .control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-top: 2px solid $gray-light-color;
+    background-color: $gray-lighter-color;
 
-			svg {
-				font-size: 1.4rem;
-				margin-right: 0.5rem;
-			}
+    button {
+      border: none;
+      background-color: transparent;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
 
-			&.status {
-				color: $gray-darker-color;
-			}
+      svg {
+        font-size: 1.5rem;
+        margin-right: 0.5rem;
+      }
 
-			&.remove {
-				color: $red-color;
-			}
-		}
-	}
+      &:hover {
+        transform: translateY(-2px);
+      }
+
+      &.status {
+        color: $gray-darker-color;
+
+        &:hover {
+          color: $green-color;
+        }
+      }
+
+      &.remove {
+        color: $red-color;
+
+        &:hover {
+          color: darken($red-color, 10%);
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
